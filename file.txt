@@ -1,0 +1,32 @@
+
+
+BEGIN
+   
+DECLARE age as INTEGER
+    
+PROMPT "enter age" and STORE IN age
+
+IF(age<18) then
+
+Display "not eligible"
+
+ELSEIF(age>60)then
+
+Display "senior citizen"
+
+ELSE(age>=18 &&age<=60)
+
+Display "eligible to vote"
+
+ENDIF
+
+END
+
+
+
+
+
+
+
+
+
