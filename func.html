@@ -1,0 +1,52 @@
+<html>
+<head>
+</head>
+<body>
+<form>
+<input type="text" id="txtNumber1" placeholder="please enter some value"/>
+<input type="text" id="txtNumber2" placeholder="please enter some value"/>
+<input type="text" id="txtTotal" value="0"/>
+<br> <br>
+<input type="button" value="+"onclick="Sum()"/>
+<input type="button" value="-"onclick="Sub()"/>
+<input type="button" value="*"onclick="Mul()"/>
+<input type="button" value="/"onclick="Div()"/>
+<input type="reset"/>
+<br><br><br><br>
+<label id="IbIMessage"></label>
+</form>
+</body>
+</html>
+<script>
+//console.log(document.getElementByld('txtNumber').value);
+//Sum();
+function sum()
+{
+var Number1=Number(document.getElementById('txtNumber1').value);
+var Number2=Number(document.getElementById('txtNumber2').value);
+document.getElementById('txtTotal').value=Number1+Number2;
+}
+function Sub()
+{
+var Number1=Number(document.getElementById('txtNumber1').value);
+var Number2=Number(document.getElementById('txtNumber2').value);
+document.getElementById('txtTotal').value=Number1-Number2;
+}
+function Mul()
+{
+var Number1=Number(document.getElementById('txtNumber1').value);
+var Number2=Number(document.getElementById('txtNumber2').value);
+document.getElementById('txtTotal').value=Number1*Number2;
+}
+function Div()
+{
+var Number1=Number(document.getElementById('txtNumber1').value);
+var Number2=Number(document.getElementById('txtNumber2').value);
+document.getElementById('txtTotal').value=Number1/Number2;
+}
+//function Sum(){
+//var Number1=6,
+//Number2=7;
+//}
+
+</script>
