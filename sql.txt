@@ -1,0 +1,60 @@
+create table sample(ID int NOT NULL,Text Varchar2(200) NOT NULL,CreatedOn Date default sysdate);
+
+ 
+
+
+
+select * from sampletable
+insert into sample(ID,TEXT) values(1,'Vikash');
+
+
+insert into sample(ID) values(2);
+
+
+ 
+
+
+create table sampletable(ID int NOT NULL,Text Varchar2(200),SampleValue Number(4,2),CreatedOn Date default sysdate,CONSTRAINT ID_UK UNIQUE(ID) );
+
+
+insert into sampletable(ID,TEXT) values(1,'Vikash');
+
+
+ 
+
+
+create table sampletablex(ID int CONSTRAINT ID_PK PRIMARY KEY,Text Varchar2(200) );
+
+ 
+
+
+
+create table sampletablexy(ID int,Text Varchar2(200),SampleValue Number(4,2) CONSTRAINT SampleValue_MIN CHECK(SampleValue>100) );
+
+ 
+
+
+
+insert into sampletablexy(ID,SampleValue) values(1,100.00);
+
+
+ 
+
+
+alter table sampletablexy add(xvalue int);
+
+
+select * from sampletablexy;
+alter table sampletablexy Modify(SampleValue int);
+
+
+select * from sampletablexy
+alter table sampletablexy  drop COLUMN XVALUE;
+
+
+ 
+
+
+drop table sampletablexy
+RENAME sampletable to sampc letablexy
+truncate table sampletablexy;
