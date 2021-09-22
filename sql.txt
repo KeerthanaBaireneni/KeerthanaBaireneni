@@ -1,60 +1,15 @@
-create table sample(ID int NOT NULL,Text Varchar2(200) NOT NULL,CreatedOn Date default sysdate);
+create table person(id int,name varchar(20),city varchar(20),commission float);
 
- 
+insert into person (id,name,city,commission) values (5001,'James Hoog','New York',0.15);
 
+insert into person (id,name,city,commission) values (5002,'Nail Knite','Paris',0.13);
 
+insert into person (id,name,city,commission) values (5005,'Pit Alex','London',0.11);
 
-select * from sampletable
-insert into sample(ID,TEXT) values(1,'Vikash');
+insert into person (id,name,city,commission) values (5006,'Mc Lyon','Paris',0.14);
 
+insert into person (id,name,city,commission) values (5007,'Paul Adam','Rome',0.13);
 
-insert into sample(ID) values(2);
+insert into person (id,name,city,commission) values (5003,'Lauson Hen','San Jose',0.12);
 
-
- 
-
-
-create table sampletable(ID int NOT NULL,Text Varchar2(200),SampleValue Number(4,2),CreatedOn Date default sysdate,CONSTRAINT ID_UK UNIQUE(ID) );
-
-
-insert into sampletable(ID,TEXT) values(1,'Vikash');
-
-
- 
-
-
-create table sampletablex(ID int CONSTRAINT ID_PK PRIMARY KEY,Text Varchar2(200) );
-
- 
-
-
-
-create table sampletablexy(ID int,Text Varchar2(200),SampleValue Number(4,2) CONSTRAINT SampleValue_MIN CHECK(SampleValue>100) );
-
- 
-
-
-
-insert into sampletablexy(ID,SampleValue) values(1,100.00);
-
-
- 
-
-
-alter table sampletablexy add(xvalue int);
-
-
-select * from sampletablexy;
-alter table sampletablexy Modify(SampleValue int);
-
-
-select * from sampletablexy
-alter table sampletablexy  drop COLUMN XVALUE;
-
-
- 
-
-
-drop table sampletablexy
-RENAME sampletable to sampc letablexy
-truncate table sampletablexy;
+select name,city from person where city='Paris';
